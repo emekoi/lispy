@@ -1,0 +1,13 @@
+name: lispy
+version: 0.1.0
+
+authors:
+  - emekoi <emekankurumeh@outlook.com>
+
+targets:
+  lispy:
+    main: src/lispy.cr
+
+crystal: 0.24.2
+
+license: MIT
