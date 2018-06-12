@@ -1,6 +1,10 @@
 require "./lispy/*"
 
-# TODO: Write documentation for `Lispy`
+EXAMPLE_PROGRAM = "
+(= foo (fn (x: String) (+ x \"foo\")))
+"
+
 module Lispy
-  # TODO: Put your code here
+  v = Parser.new(EXAMPLE_PROGRAM).parse()
+
 end
