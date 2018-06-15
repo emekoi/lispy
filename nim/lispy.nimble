@@ -11,5 +11,4 @@ bin           = @["lispy"]
 # Dependencies
 
 requires "nim   >= 0.18.0"
-requires "patty >= 0.3.1"
 requires "https://github.com/emekoi/mofunoise >= 0.5.0"

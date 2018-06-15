@@ -4,7 +4,7 @@
 #  under the terms of the MIT license. See LICENSE for details.
 #
 
-import os, mofunoise
+import os, streams, mofunoise
 import lispypkg/[parser]
 
 proc initRepl() =
@@ -12,12 +12,14 @@ proc initRepl() =
   var input = mn.mnReadLine()
 
   while input != "!":
-    echo input.parse()
+    var l = input.newStringStream().newLexer()
+    echo l.parse()
     input = mn.mnReadLine()
 
 if paramCount() > 0:
   let f = open(paramStr(1))
-  echo f.readAll().parse()
+  var l = f.newFileStream().newLexer()
+  echo l.parse()
   f.close()
 else:
   initRepl()
