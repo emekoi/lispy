@@ -1,2 +1,4 @@
 
-(println "hello")
+(do
+  (println "hello") ; print hello
+)
